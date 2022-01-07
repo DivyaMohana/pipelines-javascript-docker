@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: divyamohanapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: divyamohanapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: divyamohanapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: divyamohanapipelinesjavascriptdocker 
+          image: firstakscr.azurecr.io/divyamohanapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
